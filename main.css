@@ -1,0 +1,80 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+body {
+    background-color: rgb(32, 31, 49);
+}
+
+.searchbar {
+    margin-left: 18rem;
+    display: inline;
+}
+
+.search {
+    border-radius: 50px;
+    height: 3rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(181, 175, 166);
+    width: 25%;
+    border: none;
+    box-shadow: 0px 10px 20px -18px;
+}
+
+.search:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+}
+
+.search:hover {
+    outline: 1px solid lightgrey;
+}
+
+h2 {
+    margin-bottom: -10rem;
+    color: hotpink;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+}
+
+.anime::first-letter {
+    size: 10rem;
+}
+
+.content {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.anw-min {
+    opacity: .4;
+    border-radius: 0 40px 40px 0;
+}
+
+.fullsite {
+    text-align: center;
+    display: ruby-text;
+    padding-bottom: .5rem;
+    border-radius: 0 0 40px 40px;
+    font-size: x-large;
+    background-color: palevioletred;
+}
+
+::-webkit-scrollbar {
+    width: 1.1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(54, 54, 54, 0.409);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555555b4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #696969d1;
+}
