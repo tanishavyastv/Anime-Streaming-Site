@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, etc.).
+- A modern web browser (Chrome, Brave, etc.).
 - An internet connection for loading external resources like Bootstrap and jQuery.
 
 ### Steps
