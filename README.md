@@ -13,7 +13,7 @@ Welcome to **H!Anime**, an anime streaming website featuring a variety of anime 
 
 ## Demo
 
-You can view the live demo here: [H!Anime](https://anime-webpage-three.vercel.app/fullsite.html)
+You can view the live demo here: [H!Anime](https://anime-webpage-three.vercel.app/index.html)
 
 ## Technologies Used
 
