@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H!Anime</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        $("#navbar").load("navbar.html");
+    </script>
+    
+    <!-- Content -->
+    <section class="container mt-4">
+        <div class="content row d-inline-flex">
+            <h1 class="d-inline-flex hianime">h<span class="i">!</span>anime.to</h1>
+            <p class="anime mt-5 col-6 text-white d-flex align-items-center">
+                Anime, style of animation popular in Japanese films. Early anime films were intended primarily for the
+                Japanese market and, as such, employed many cultural references unique to Japan. For example, the large
+                eyes of anime characters are commonly perceived in Japan as multifaceted “windows to the soul.” Much of
+                the genre is aimed at children, but anime films are sometimes marked by adult themes and subject matter.
+                Modern anime began in 1956 and found lasting success in 1961 with the establishment of Mushi Productions
+                by Osamu Tezuka, a leading figure in modern manga, the dense, novelistic Japanese comic book style that
+                contributed greatly to the aesthetic of anime. Anime such as Miyazaki Hayao's Princess Mononoke (1997)
+                are the modern equivalent of the epic folk adventures once filmed by Japanese masters such as Mizoguchi
+                Kenji and Kurosawa Akira. At the turn of the 21st century, anime began to attain wide international
+                popularity with the Pokémon television series and films such as Miyazaki's Spirited Away (2002), winner
+                of an Academy Award for best animated feature film.
+            </p>
+            <img class="anw-min col-6" src="photos/anw-min.webp" alt="anime">
+        </div>
+        <!-- Full Site -->
+        <a href="fullsite.html"><button class="fullsite col-12 fw-bolder text-white">
+                View Full Site &nbsp;<img src="photos/arrow.png" alt="arrow" width="25px">
+        </button></a>
+    </section>
+    <div id="footer"></div>
+    <script>
+        $("#footer").load("footer.html");
+    </script>
+</body>
+
+</html>

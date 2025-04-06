@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popular Anime - H!Anime</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function stopVideo(iframeId) {
+            var iframe = document.getElementById(iframeId);
+            iframe.src = iframe.src;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        $("#navbar").load("navbar.html");
+    </script>
+
+    <!-- Popular Anime Section -->
+    <section class="container my-5">
+        <h2 class="mb-4 text-center text-uppercase">Popular Anime</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4 d-flex">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/naruto.png" class="img-fluid rounded" alt="Naruto">
+                    <h5 class="mt-3">Naruto</h5>
+                    <div class="stars mb-2">★★★★☆</div>
+                    <p class="card-desc">A young ninja strives to become the strongest in his village.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#narutoTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#narutoModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 d-flex">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/onepiece.png" class="img-fluid rounded" alt="One Piece">
+                    <h5 class="mt-3">One Piece</h5>
+                    <div class="stars mb-2">★★★★★</div>
+                    <p class="card-desc">Luffy sails the Grand Line in search of the ultimate treasure.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#onepieceTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#onepieceModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 d-flex">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/demonslayer.png" class="img-fluid rounded" alt="Demon Slayer">
+                    <h5 class="mt-3">Demon Slayer</h5>
+                    <div class="stars mb-2">★★★★★</div>
+                    <p class="card-desc">Tanjiro fights demons to save his sister and avenge his family.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#demonslayerTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#demonModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-4 d-flex">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/deathnote.png" class="img-fluid rounded" alt="Death Note">
+                    <h5 class="mt-3">Death Note</h5>
+                    <div class="stars mb-2">★★★★★</div>
+                    <p class="card-desc">Light Yagami finds a notebook that allows him to kill anyone by writing their
+                        name.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#trailerModal">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#deathnoteModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-4 d-flex">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/attackontitan.png" class="img-fluid rounded" alt="Attack on Titan">
+                    <h5 class="mt-3">Attack on Titan</h5>
+                    <div class="stars mb-2">★★★★★</div>
+                    <p class="card-desc">Eren fights Titans and uncovers the secrets of humanity's survival.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#aotTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#aotModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-4 d-flex">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/jjk.png" class="img-fluid rounded" alt="Jujutsu Kaisen">
+                    <h5 class="mt-3">Jujutsu Kaisen</h5>
+                    <div class="stars mb-2">★★★★☆</div>
+                    <p class="card-desc">Yuji joins a secret organization to fight curses and protect lives.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#jjkTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#jujutsuModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Extra Cards (Initially Hidden) -->
+            <!-- Card 1 Tokyo Ghoul -->
+            <div class="col-md-4 extra-card d-none">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/tokyo-ghoul.png" class="img-fluid rounded card-img-top" alt="Tokyo Ghoul">
+                    <h5 class="mt-3">Tokyo Ghoul</h5>
+                    <div class="stars mb-2">★★★★☆</div>
+                    <p class="card-text">A college student becomes a half-ghoul after a deadly encounter.</p>
+
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#ghoulTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#ghoulModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: Bleach -->
+            <div class="col-md-4 extra-card d-none">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/bleach.png" class="img-fluid rounded card-img-top" alt="Bleach">
+                    <h5 class="mt-3">Bleach</h5>
+                    <div class="stars mb-2">★★★★☆</div>
+                    <p class="card-text">Ichigo gains powers of a Soul Reaper to protect souls from evil spirits.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#bleachTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#bleachModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3: One Punch Man -->
+            <div class="col-md-4 extra-card d-none">
+                <div class="anime-card p-3 h-100 w-100">
+                    <img src="photos/onepunchman.png" class="img-fluid rounded card-img-top" alt="One Punch Man">
+                    <h5 class="mt-3">One Punch Man</h5>
+                    <div class="stars mb-2">★★★★★</div>
+                    <p class="card-text">Saitama defeats any foe with a single punch but searches for meaning in his
+                        power.</p>
+                    <div class="mt-auto d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-light">Watch Now</button>
+                        <button class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#opmTrailer">Watch Trailer</button>
+                        <button class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#opmModal">More
+                            Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button id="showMoreBtn" class="btn btn-outline-warning px-4 py-2 rounded-pill">
+                    Show More ↓
+                </button>
+            </div>
+
+            <!-- Naruto - Info Modal -->
+            <div class="modal fade" id="narutoModal" tabindex="-1" aria-labelledby="narutoLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="narutoLabel">Naruto</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Naruto is an energetic ninja dreaming to become Hokage. His journey is
+                            filled with hardship, bonds, and epic battles.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- One Piece - Info Modal -->
+            <div class="modal fade" id="onepieceModal" tabindex="-1" aria-labelledby="onepieceLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="onepieceLabel">One Piece</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Follow Luffy and his crew as they chase the Grand Line's greatest
+                            treasure—One Piece!</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Demon Slayer - Info Modal -->
+            <div class="modal fade" id="demonModal" tabindex="-1" aria-labelledby="demonLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="demonLabel">Demon Slayer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Tanjiro Kamado battles demons to save his sister and avenge his family
+                            in this beautifully animated action tale.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Death Note - Info Modal -->
+            <div class="modal fade" id="deathnoteModal" tabindex="-1" aria-labelledby="deathnoteLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="deathnoteLabel">Death Note</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">A psychological thriller where Light Yagami uses the Death Note to rid
+                            the world of criminals while being hunted by the mysterious detective L.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- AOT - Info Modal -->
+            <div class="modal fade" id="aotModal" tabindex="-1" aria-labelledby="aotLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="aotLabel">Attack on Titan</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Humanity’s last stand behind giant walls faces brutal threats from the
+                            monstrous Titans.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jujutsu - Info Modal -->
+            <div class="modal fade" id="jujutsuModal" tabindex="-1" aria-labelledby="jujutsuLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="jujutsuLabel">Jujutsu Kaisen</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">A thrilling journey where curses threaten humanity and Yuji joins the
+                            fight to end them.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tokyo Ghoul - Info Modal -->
+            <div class="modal fade" id="ghoulModal" tabindex="-1" aria-labelledby="ghoulModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="ghoulModalLabel">Tokyo Ghoul</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">In a world where ghouls live secretly among humans, college student
+                            Kaneki is turned into a
+                            half-ghoul and must learn to survive in both worlds.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bleach - Info Modal -->
+            <div class="modal fade" id="bleachModal" tabindex="-1" aria-labelledby="bleachModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="bleachModalLabel">Bleach</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Ichigo Kurosaki accidentally obtains the power of a Soul Reaper and must
+                            battle evil spirits
+                            while protecting those around him.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- One Punch Man - Info Modal -->
+            <div class="modal fade" id="opmModal" tabindex="-1" aria-labelledby="opmModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="opmModalLabel">One Punch Man</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Saitama, a superhero who can defeat any enemy with one punch, struggles
+                            to find a worthy
+                            opponent while questioning the purpose of his strength.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Naruto Trailer Modal -->
+            <div class="modal fade" id="narutoTrailer" tabindex="-1" aria-labelledby="narutoTrailerLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title text-white" id="narutoTrailerLabel">Naruto Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                onclick="stopVideo('narutoIframe')"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="narutoIframe" src="https://www.youtube.com/embed/-G9BqkgZXRA"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- One Piece Trailer Modal -->
+            <div class="modal fade" id="onepieceTrailer" tabindex="-1" aria-labelledby="onepieceTrailerLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title text-white" id="onepieceTrailerLabel">One Piece Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                onclick="stopVideo('onepieceIframe')"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="onepieceIframe" src="https://www.youtube.com/embed/S8_YwFLCh4U"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Demon Slayer Trailer Modal -->
+            <div class="modal fade" id="demonslayerTrailer" tabindex="-1" aria-labelledby="demonslayerTrailerLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title text-white" id="demonslayerTrailerLabel">Demon Slayer Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                onclick="stopVideo('demonslayerIframe')"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="demonslayerIframe" src="https://www.youtube.com/embed/VQGCKyvzIM4"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Death Model Trailer Modal -->
+            <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title text-white" id="trailerModalLabel">Death Note Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close" onclick="stopVideo()"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="trailerVideo" src="https://www.youtube.com/embed/tJZtOrm-WPk"
+                                    title="Death Note Trailer" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Attack on Titan Trailer Modal -->
+            <div class="modal fade" id="aotTrailer" tabindex="-1" aria-labelledby="aotTrailerLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title text-white" id="aotTrailerLabel">Attack on Titan Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                onclick="stopVideo('aotIframe')"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="aotIframe" src="https://www.youtube.com/embed/MGRm4IzK1SQ"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jujutsu Kaisen Trailer Modal -->
+            <div class="modal fade" id="jjkTrailer" tabindex="-1" aria-labelledby="jjkTrailerLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title text-white" id="jjkTrailerLabel">Jujutsu Kaisen Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                onclick="stopVideo('jjkIframe')"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="jjkIframe" src="https://www.youtube.com/embed/pkKu9hLT-t8"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tokyo Ghoul Trailer Modal -->
+            <div class="modal fade" id="ghoulTrailer" tabindex="-1" aria-labelledby="ghoulTrailerLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="ghoulTrailerLabel">Tokyo Ghoul Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/vGuQeQsoRgU"
+                                    title="Tokyo Ghoul Trailer" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bleach Trailer Modal -->
+            <div class="modal fade" id="bleachTrailer" tabindex="-1" aria-labelledby="bleachTrailerLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="bleachTrailerLabel">Bleach Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/KPL8K8Rfyxc"
+                                    title="Bleach Trailer" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- One Punch Man Trailer Modal -->
+            <div class="modal fade" id="opmTrailer" tabindex="-1" aria-labelledby="opmTrailerLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="opmTrailerLabel">One Punch Man Trailer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/Poo5lqoWSGw"
+                                    title="One Punch Man Trailer" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+    <script>
+      $("#footer").load("footer.html");
+    </script>
+    <script>
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const hiddenCards = document.querySelectorAll('.extra-card');
+
+        showMoreBtn.addEventListener('click', () => {
+            hiddenCards.forEach(card => card.classList.remove('d-none'));
+            showMoreBtn.style.display = 'none'; // hide button after click
+        });
+    </script>
+</body>
+
+</html>
