@@ -1,0 +1,97 @@
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anime-card,
+.category-card {
+    margin: 30px 15px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: flex;
+}
+
+.genre-link {
+    text-decoration: underline;
+    color: hotpink;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.genre-link:hover {
+    color: white;
+}
+
+.category-card {
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    height: auto;
+}
+
+.category-card:hover {
+    background-color: rgb(32, 31, 49);
+    transform: scale(1.05);
+}
+
+.anime-card-result {
+    background-color: rgb(24, 24, 38);
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.anime-card-result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.anime-card-result:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px hotpink;
+}
+
+.genre-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.genre-tag {
+    background-color: #ff4081;
+    color: white;
+    padding: 3px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.genre-tag:hover {
+    background-color: rgb(32, 31, 49);
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}

@@ -132,7 +132,8 @@ h1.hianime {
     background: #696969d1;
 }
 
-.anime-card {
+.anime-card,
+.category-card {
     background-color: #1e1d2b;
     border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -183,4 +184,19 @@ h1.hianime {
 .btn-pink:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5);
+}
+
+#search-suggestions {
+    max-height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #343a40;
 }
