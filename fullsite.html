@@ -30,21 +30,21 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
                     <div class="d-flex justify-content-center">
-                        <div class="anime-card p-3">
+                        <div class="anime-card fade-in p-3">
                             <img src="photos/attackontitan.png" alt="Attack on Titan">
                             <h5 class="mt-3">Attack on Titan</h5>
                             <p class="card-desc">Humanity's struggle for survival against the titans. An epic
                                 action-packed anime!</p>
                             <button class="btn-pink">Watch Now</button>
                         </div>
-                        <div class="anime-card p-3">
+                        <div class="anime-card fade-in p-3">
                             <img src="photos/naruto.png" alt="Naruto">
                             <h5 class="mt-3">Naruto</h5>
                             <p class="card-desc">Follow the journey of Naruto Uzumaki as he strives to become the
                                 Hokage.</p>
                             <button class="btn-pink">Watch Now</button>
                         </div>
-                        <div class="anime-card p-3">
+                        <div class="anime-card fade-in p-3">
                             <img src="photos/demonslayer.png" alt="Demon Slayer">
                             <h5 class="mt-3">Demon Slayer</h5>
                             <p class="card-desc">Tanjiro's journey to fight demons after his family is slaughtered by
@@ -56,21 +56,21 @@
                 <!-- Slide 2 -->
                 <div class="carousel-item">
                     <div class="d-flex justify-content-center">
-                        <div class="anime-card p-3">
+                        <div class="anime-card fade-in p-3">
                             <img src="photos/onepiece.png" alt="One Piece">
                             <h5 class="mt-3">One Piece</h5>
                             <p class="card-desc">Join Luffy on his journey to find the legendary treasure, the One
                                 Piece!</p>
                             <button class="btn-pink">Watch Now</button>
                         </div>
-                        <div class="anime-card p-3">
+                        <div class="anime-card fade-in p-3">
                             <img src="photos/academia.png" alt="My Hero Academia">
                             <h5 class="mt-3">My Hero Academia</h5>
                             <p class="card-desc">Follow the story of Izuku Midoriya in a world where most people have
                                 superpowers.</p>
                             <button class="btn-pink">Watch Now</button>
                         </div>
-                        <div class="anime-card p-3">
+                        <div class="anime-card fade-in p-3">
                             <img src="photos/dragonBallZ.png" alt="Dragon Ball Z">
                             <h5 class="mt-3">Dragon Ball Z</h5>
                             <p class="card-desc">The legendary saga of Goku and his friends fighting against powerful
@@ -145,84 +145,9 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script>
-        $("#footer").load("footer.html");
-    </script>
+    <script>$("#footer").load("footer.html")</script>
 
-    <!-- Genre Fetch Script -->
-    <script>
-        const genreMap = {
-            1: "Action",
-            2: "Adventure",
-            10: "Fantasy",
-            22: "Romance"
-        };
-
-        let currentGenreId = null;
-        let currentPage = 1;
-
-        // Genre click handlers
-        document.querySelectorAll('.genre-link').forEach(link => {
-            link.addEventListener('click', async (e) => {
-                e.preventDefault();
-                currentGenreId = e.target.closest('a').dataset.genreId;
-                currentPage = 1;
-                fetchAnime(currentGenreId, currentPage);
-            });
-        });
-
-        // Fetch anime by genre + page
-        async function fetchAnime(genreId, page) {
-            const grid = document.getElementById('results-grid');
-            grid.innerHTML = "";
-
-            const response = await fetch(`https://api.jikan.moe/v4/anime?genres=${genreId}&page=${page}&limit=6`);
-            const data = await response.json();
-
-            data.data.forEach(anime => {
-                const col = document.createElement('div');
-                col.className = 'col-md-4';
-
-                const genreTags = anime.genres.map(g => `<span class="genre-tag">${g.name}</span>`).join('');
-
-                col.innerHTML = `
-            <div class="anime-card-result">
-                <div class="genre-tags">${genreTags}</div>
-                <img src="${anime.images.jpg.image_url}" alt="${anime.title}">
-                <h5 class="mt-2">${anime.title}</h5>
-                <p>${anime.synopsis ? anime.synopsis.slice(0, 100) + "..." : "No description available."}</p>
-                <a href="${anime.url}" target="_blank" class="btn btn-pink">Watch Now</a>
-            </div>
-        `;
-                grid.appendChild(col);
-            });
-
-            // Scroll and show pagination
-            document.getElementById('genre-results').scrollIntoView({ behavior: 'smooth' });
-            document.getElementById('pagination-controls').classList.remove('d-none');
-
-            // Update pagination controls
-            document.getElementById('currentPage').textContent = `Page ${page}`;
-            document.getElementById('prevPage').disabled = page === 1;
-            document.getElementById('nextPage').disabled = !data.pagination.has_next_page;
-        }
-
-
-        // Pagination button handlers
-        document.getElementById('prevPage').addEventListener('click', () => {
-            if (currentPage > 1 && currentGenreId) {
-                currentPage--;
-                fetchAnime(currentGenreId, currentPage);
-            }
-        });
-
-        document.getElementById('nextPage').addEventListener('click', () => {
-            if (currentGenreId) {
-                currentPage++;
-                fetchAnime(currentGenreId, currentPage);
-            }
-        });
-    </script>
+    <script src="fullsite.js"></script>
 </body>
 
 </html>
