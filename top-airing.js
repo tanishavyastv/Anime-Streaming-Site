@@ -68,7 +68,7 @@ const airingAnime = [
 let aired = 0;
 const perLoad = 3;
 
-function loadMoreAiring() {
+function loadMoreAiring(event) {
     const container = document.getElementById("airingContainer");
     const nextBatch = airingAnime.slice(aired, aired + perLoad);
 

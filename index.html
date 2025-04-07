@@ -4,49 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to H!Anime – Explore the world of Japanese animation with a stylish and informative interface.">
+    <meta name="keywords" content="anime, animation, Japanese animation, H!Anime, anime series, anime movies">
     <title>H!Anime</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <div id="navbar"></div>
-    <script>
-        $("#navbar").load("navbar.html");
-    </script>
+    <header id="navbar"></header>
 
-    <!-- Content -->
-    <section class="container mt-4">
-        <div class="content row d-inline-flex">
-            <h1 class="d-inline-flex hianime">h<span class="i">!</span>anime.to</h1>
-            <p class="anime mt-5 col-6 text-white d-flex align-items-center">
-                Anime, style of animation popular in Japanese films. Early anime films were intended primarily for the
-                Japanese market and, as such, employed many cultural references unique to Japan. For example, the large
-                eyes of anime characters are commonly perceived in Japan as multifaceted “windows to the soul.” Much of
-                the genre is aimed at children, but anime films are sometimes marked by adult themes and subject matter.
-                Modern anime began in 1956 and found lasting success in 1961 with the establishment of Mushi Productions
-                by Osamu Tezuka, a leading figure in modern manga, the dense, novelistic Japanese comic book style that
-                contributed greatly to the aesthetic of anime. Anime such as Miyazaki Hayao's Princess Mononoke (1997)
-                are the modern equivalent of the epic folk adventures once filmed by Japanese masters such as Mizoguchi
-                Kenji and Kurosawa Akira. At the turn of the 21st century, anime began to attain wide international
-                popularity with the Pokémon television series and films such as Miyazaki's Spirited Away (2002), winner
-                of an Academy Award for best animated feature film.
-            </p>
-            <img class="anw-min col-6" src="photos/anw-min.webp" alt="anime">
-        </div>
-        <!-- Full Site -->
-        <a href="fullsite.html"><button class="fullsite col-12 fw-bolder text-white">
-                View Full Site &nbsp;<img src="photos/arrow.png" alt="arrow" width="25px">
-            </button></a>
-    </section>
-    <div id="footer"></div>
+    <!-- Scroll Container -->
+    <main class="scroll-container">
+        <!-- section 1 -->
+        <section class="container scroll-section">
+            <div class="row align-items-center g-4">
+                <!-- Text -->
+                <div class="col-12 col-md-6">
+                    <h1 class="hianime">h<span class="i">!</span>anime.to</h1>
+                    <p class="anime text-white mt-4">
+                        Anime, style of animation popular in Japanese films. Early anime films were intended primarily
+                        for the Japanese market and, as such, employed many cultural references unique to Japan. For
+                        example, the large eyes of anime characters are commonly perceived in Japan as multifaceted
+                        “windows to the
+                        soul.” Much of the genre is aimed at children, but anime films are sometimes marked by adult
+                        themes and
+                        subject matter. Modern anime began in 1956 and found lasting success in 1961 with the
+                        establishment of
+                        Mushi Productions by Osamu Tezuka, a leading figure in modern manga, the dense, novelistic
+                        Japanese
+                        comic book style that contributed greatly to the aesthetic of anime. Anime such as Miyazaki
+                        Hayao's Princess
+                        Mononoke (1997) are the modern equivalent of the epic folk adventures once filmed by Japanese
+                        masters
+                        such as Mizoguchi Kenji and Kurosawa Akira. At the turn of the 21st century, anime began to
+                        attain wide
+                        international popularity with the Pokémon television series and films such as Miyazaki's
+                        Spirited Away (2002),
+                        winner of an Academy Award for best animated feature film.
+                    </p>
+                </div>
+                <!-- Image -->
+                <div class="col-12 col-md-6">
+                    <img loading="lazy" class="anw-min img-fluid" src="photos/anw-min.webp"
+                        alt="Animated Japanese Scene">
+                </div>
+            </div>
+        </section>
+        <!-- section 2 -->
+        <section class="container scroll-section">
+            <!-- CTA Text -->
+            <div class="mt-5 text-center text-white">
+                <h1>Welcome to H!Anime</h1>
+                <p>Your one-stop destination for all things anime!</p>
+                <p>Explore our collection of anime series, movies, and more.</p>
+                <p>Join our community of anime enthusiasts and share your passion!</p>
+                <p>Stay updated with the latest news and trends in the anime world.</p>
+                <p>Discover new favorites and revisit old classics.</p>
+                <a href="fullsite.html" class="text-decoration-none">
+                    <button class="fullsite col-12 fw-bolder text-white">
+                        View Full Site &nbsp;<img src="photos/arrow.png" alt="arrow" width="25px">
+                    </button>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
     <script>
-        $("#footer").load("footer.html");
+        $(function () {
+            $("#navbar").load("navbar.html");
+            $("#footer").load("footer.html");
+        });
     </script>
 </body>
-
 </html>

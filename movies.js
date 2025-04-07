@@ -69,8 +69,8 @@ const perLoad = 3;
 
 function loadMoreMovies() {
   const container = document.getElementById("movieCardsContainer");
-
   const nextMovies = movies.slice(displayed, displayed + perLoad);
+
   nextMovies.forEach((movie, i) => {
     const index = displayed + i;
     const card = `
@@ -130,4 +130,6 @@ function loadMoreMovies() {
     event.target.style.display = "none";
   }
 }
-window.onload = loadMoreMovies;
+document.addEventListener("DOMContentLoaded", () => {
+  loadMoreMovies();
+});
