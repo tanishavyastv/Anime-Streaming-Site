@@ -24,13 +24,13 @@
           <div class="tab-pane fade show active" id="pane-login">
             <form id="loginForm" style="max-width:400px; width:100%;">
               <input type="hidden" name="formType" value="login">
-              <div id="loginMessage" class="mb-3 text-center"></div>
               <div class="mb-3">
                 <input type="email" name="loginEmail" class="form-control" placeholder="Email" required>
               </div>
               <div class="mb-3">
                 <input type="password" name="loginPassword" class="form-control" placeholder="Password" required>
               </div>
+              <div id="loginMessage" class="mb-3 text-center"></div>
               <button type="submit" class="btn btn-pink w-100">Login</button>
             </form>
           </div>
@@ -39,7 +39,6 @@
           <div class="tab-pane fade" id="pane-register">
             <form id="registerForm" style="max-width:400px; width:100%;">
               <input type="hidden" name="formType" value="register">
-              <div id="registerMessage" class="mb-3 text-center"></div>
               <div class="mb-3">
                 <input type="text" name="registerName" class="form-control" placeholder="Name" required>
               </div>
@@ -49,6 +48,7 @@
               <div class="mb-3">
                 <input type="password" name="registerPassword" class="form-control" placeholder="Password" required>
               </div>
+              <div id="registerMessage" class="mb-3 text-center"></div>
               <button type="submit" class="btn btn-pink w-100">Register</button>
             </form>
           </div>

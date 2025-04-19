@@ -1,3 +1,6 @@
+$("#navbar").load("navbar.php");
+$("#footer").load("footer.html");
+
 const airingAnime = [
     {
         title: "Solo Leveling",

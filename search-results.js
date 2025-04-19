@@ -1,4 +1,4 @@
-$("#navbar").load("navbar.html");
+$("#navbar").load("navbar.php");
 $("#footer").load("footer.html");
 
 const urlParams = new URLSearchParams(window.location.search);

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -40,14 +41,23 @@
                         <a class="nav-link" href="top-airing.html">Top Airing</a>
                     </li>
                     <li class="nav-item">
-                        <?php session_start(); ?>
-                        <?php if (!empty($_SESSION['user_name'])): ?>
-                          <span class="navbar-text text-white mx-2">
-                            Welcome, <?= htmlspecialchars($_SESSION['user_name']) ?>
-                          </span>
-                          <a class="nav-link" href="logout.php">Logout</a>
+                    <?php session_start(); ?>
+                    <?php if (!empty($_SESSION['user_name'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.php">Profile</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <span class="navbar-text text-white mx-2">
+                                Welcome, <?= htmlspecialchars($_SESSION['user_name']) ?>
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
                         <?php else: ?>
-                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                            </li>
                         <?php endif; ?>
                     </li>
                 </ul>
@@ -67,7 +77,6 @@
         </div>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="navbar.js"></script>
     <?php include 'login-model.php'; ?>
 </body>
