@@ -99,8 +99,16 @@ form .form-control:focus {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+#loginMessage,
+#registerMessage {
+    display: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }

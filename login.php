@@ -1,51 +1,87 @@
 <?php
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+error_reporting(E_ALL);
+
+header('Content-Type: application/json');
+
 session_start();
-require 'login-model.php';
+require 'db.php';
 
-// Register
-if (isset($_POST['register'])) {
-    $name = $conn->real_escape_string($_POST['name']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$response = [
+    'status'  => 'error',
+    'message' => 'Invalid request.'
+];
 
-    $checkQuery = "SELECT * FROM users WHERE email='$email'";
-    $checkResult = $conn->query($checkQuery);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $type = $_POST['formType'] ?? '';
 
-    if ($checkResult->num_rows > 0) {
-        echo "Email already registered.";
-    } else {
-        $insert = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
-        if ($conn->query($insert)) {
-            $_SESSION['user_name'] = $name;
-            header("Location: index.html");
-            exit();
+    // ----- LOGIN -----
+    if ($type === 'login') {
+        $email    = $conn->real_escape_string($_POST['loginEmail']    ?? '');
+        $password = $_POST['loginPassword'] ?? '';
+
+        $res = $conn->query("SELECT name, password FROM users WHERE email='$email'");
+        if ($res && $res->num_rows === 1) {
+            $user = $res->fetch_assoc();
+            if (password_verify($password, $user['password'])) {
+                // Success: set session and respond
+                $_SESSION['user_name'] = $user['name'];
+                $response = [
+                    'status'  => 'success',
+                    'message' => 'Login successful!'
+                ];
+            } else {
+                // Wrong password
+                $response = [
+                    'status'  => 'error',
+                    'message' => 'Wrong password.'
+                ];
+            }
         } else {
-            echo "Registration failed: " . $conn->error;
+            // Email not found
+            $response = [
+                'status'  => 'error',
+                'message' => 'Email not registered.'
+            ];
+        }
+
+    // ----- REGISTER -----
+    } elseif ($type === 'register') {
+        $name     = $conn->real_escape_string($_POST['registerName']     ?? '');
+        $email    = $conn->real_escape_string($_POST['registerEmail']    ?? '');
+        $password = $_POST['registerPassword'] ?? '';
+
+        // Check if email already exists
+        $check = $conn->query("SELECT id FROM users WHERE email='$email'");
+        if ($check && $check->num_rows > 0) {
+            $response = [
+                'status'  => 'error',
+                'message' => 'Email already registered.'
+            ];
+        } else {
+            // Insert new user
+            $hash   = password_hash($password, PASSWORD_DEFAULT);
+            $stmt   = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+            $stmt->bind_param("sss", $name, $email, $hash);
+            if ($stmt->execute()) {
+                $_SESSION['user_name'] = $name;
+                $response = [
+                    'status'  => 'success',
+                    'message' => 'Registration successful!'
+                ];
+            } else {
+                $response = [
+                    'status'  => 'error',
+                    'message' => 'Registration failed. Please try again.'
+                ];
+            }
         }
     }
 }
 
-// Login
-if (isset($_POST['login'])) {
-    $email = $conn->real_escape_string($_POST['email']);
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $result = $conn->query($sql);
-
-    if ($result && $result->num_rows === 1) {
-        $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['user_name'] = $user['name'];
-            header("Location: index.html");
-            exit();
-        } else {
-            echo "Invalid password.";
-        }
-    } else {
-        echo "No user found with this email.";
-    }
-}
+echo json_encode($response);
 
 $conn->close();
+exit;
 ?>

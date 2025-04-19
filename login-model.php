@@ -1,39 +1,61 @@
-<?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "anime_site";
+<link rel="stylesheet" href="login-model.css">
 
-// Create connection
-$conn = new mysqli($host, $user, $pass);
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">User Login / Signup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex flex-column justify-content-center align-items-center">
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+        <ul class="nav nav-pills mb-3" id="login-register-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="tab-login" data-bs-toggle="pill" href="#pane-login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-register" data-bs-toggle="pill" href="#pane-register">Register</a>
+          </li>
+        </ul>
 
-// Create database if it doesn't exist
-$sql = "CREATE DATABASE IF NOT EXISTS $db";
-if ($conn->query($sql) === TRUE) {
-} else {
-    die("Error creating database: " . $conn->error);
-}
+        <div class="tab-content w-100">
 
-// Select the database
-$conn->select_db($db);
+          <!-- LOGIN PANE -->
+          <div class="tab-pane fade show active" id="pane-login">
+            <form id="loginForm" style="max-width:400px; width:100%;">
+              <input type="hidden" name="formType" value="login">
+              <div id="loginMessage" class="mb-3 text-center"></div>
+              <div class="mb-3">
+                <input type="email" name="loginEmail" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" name="loginPassword" class="form-control" placeholder="Password" required>
+              </div>
+              <button type="submit" class="btn btn-pink w-100">Login</button>
+            </form>
+          </div>
 
-// Create users table
-$tableQuery = "
-CREATE TABLE IF NOT EXISTS users (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)";
+          <!-- REGISTER PANE -->
+          <div class="tab-pane fade" id="pane-register">
+            <form id="registerForm" style="max-width:400px; width:100%;">
+              <input type="hidden" name="formType" value="register">
+              <div id="registerMessage" class="mb-3 text-center"></div>
+              <div class="mb-3">
+                <input type="text" name="registerName" class="form-control" placeholder="Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" name="registerEmail" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" name="registerPassword" class="form-control" placeholder="Password" required>
+              </div>
+              <button type="submit" class="btn btn-pink w-100">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-if ($conn->query($tableQuery) === TRUE) {
-} else {
-    die("Error creating table: " . $conn->error);
-}
-?>
+<script src="login-model.js"></script>
