@@ -84,23 +84,23 @@ anime-webpage/
 ```
 
 ## ✨ Features
-* 🔐 *User Login & Registration (modal-based)*
-* 👤 *Profile page with:*
-** Email update
-** Password change
-** Profile picture upload
-* 📺 *Dynamic Anime Sections:*
-** Movies
-** Series
-** Popular
-** Top Airing
-* 🔍 *Search functionality*
-* 🧩 *Reusable components* (navbar.php, footer.html)
-* 🎞️ *Modal-based* anime trailers and info popups.
-* 🚥 *Horizontal Carousel* for displaying featured anime.
-* 🎴 *Anime Cards* with images, titles, descriptions, and watch buttons.
-* 👐🏻 *Category Section* to browse anime by different genres.
-* 🔥 *Stylish Animations* and hover effects to enhance user interaction.
+- 🔐 *User Login & Registration (modal-based)*
+- 👤 *Profile page with:*
+    - Email update
+    - Password change
+    - Profile picture upload
+- 📺 *Dynamic Anime Sections:*
+    - Movies
+    - Series
+    - Popular
+    - Top Airing
+- 🔍 *Search functionality*
+- 🧩 *Reusable components* (navbar.php, footer.html)
+- 🎞️ *Modal-based* anime trailers and info popups.
+- 🚥 *Horizontal Carousel* for displaying featured anime.
+- 🎴 *Anime Cards* with images, titles, descriptions, and watch buttons.
+- 👐🏻 *Category Section* to browse anime by different genres.
+- 🔥 *Stylish Animations* and hover effects to enhance user interaction.
 
 ## 🛠️ Tech Stack
 - **Frontend**: HTML, CSS (Bootstrap + custom), JavaScript
