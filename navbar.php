@@ -39,6 +39,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="top-airing.html">Top Airing</a>
                     </li>
+                    <li class="nav-item">
+                        <?php session_start(); ?>
+                        <?php if (!empty($_SESSION['user_name'])): ?>
+                          <span class="navbar-text text-white mx-2">
+                            Welcome, <?= htmlspecialchars($_SESSION['user_name']) ?>
+                          </span>
+                          <a class="nav-link" href="logout.php">Logout</a>
+                        <?php else: ?>
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                        <?php endif; ?>
+                    </li>
                 </ul>
             </div>
 
@@ -58,6 +69,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="navbar.js"></script>
+    <?php include 'login-model.html'; ?>
 </body>
 
 </html>

@@ -1,0 +1,106 @@
+.nav-pills .nav-link {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-text);
+    border-radius: 0;
+    background-color: var(--color-card-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: var(--color-card-bg);
+    color: var(--color-btn-yellow);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--color-btn-yellow);
+    color: #000;
+}
+
+/* Modal Appearance */
+.modal-content {
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px var(--color-card-shadow);
+    animation: fadeIn 0.4s ease-in-out;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--color-scrollbar-thumb);
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-family: var(--font-title);
+    color: var(--color-primary);
+}
+
+/* Form Styles */
+form {
+    padding: 20px;
+}
+
+form label {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+form .form-control {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 1px solid var(--color-scrollbar-thumb);
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+form .form-control:focus {
+    background-color: var(--color-secondary-hover);
+    border-color: var(--color-btn-yellow);
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
+}
+
+/* Buttons */
+.btn-outline-warning {
+    color: var(--color-btn-yellow);
+    border-color: var(--color-btn-yellow);
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--color-btn-yellow);
+    color: #000;
+}
+
+.btn-outline-light {
+    border-radius: 25px;
+    padding: 10px 25px;
+}
+
+/* Responsive title size */
+@media (max-width: 576px) {
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 10px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
