@@ -12,26 +12,26 @@ The site structure mimics real-world platforms like Crunchyroll or Netflix, but 
 - **Sessions:** User sessions are maintained using PHP to display personalized messages and restrict unauthorized access.
 
 ### 👤 2. User Profile Management
-- Profile Page: Logged-in users can:
+- **Profile Page:** Logged-in users can:
 - Update their email.
 - Change their password.
 - Upload or change their profile picture (image only).
 
 ### 🎬 3. Anime Content Browsing
-- Movies Section: Displays anime movies.
-- TV Series Section: Displays popular series.
-- Popular Page: Highlights the most viewed or trending anime.
-- Top Airing Page: Displays current top-airing anime series.
+- **Movies Section:** Displays anime movies.
+- **TV Series Section:** Displays popular series.
+- **Popular Page:** Highlights the most viewed or trending anime.
+- **Top Airing Page:** Displays current top-airing anime series.
 
 ### 🔍 4. Search Functionality
-- Search Bar: Allows users to type anime names and view results on a separate page (search-results.html).
-- Suggestions & Filters: Helps users quickly find their favorite shows.
+- **Search Bar:** Allows users to type anime names and view results on a separate page (search-results.html).
+- **Suggestions & Filters:** Helps users quickly find their favorite shows.
 
 ### 🧩 5. Reusable Components
-- Navbar/Footer: Modular components (navbar.php, footer.html) are dynamically loaded for consistency across all pages.
+- **Navbar/Footer:** Modular components (navbar.php, footer.html) are dynamically loaded for consistency across all pages.
 
 ### 📁 6. File Upload
-- Profile Picture Upload: Only images are accepted and securely stored in the uploads/ folder.
+- **Profile Picture Upload:** Only images are accepted and securely stored in the uploads/ folder.
 
 ## 📺 Demo
 You can view the live demo here: [H!Anime](https://anime-webpage-tanishavyastvs-projects.vercel.app/)
