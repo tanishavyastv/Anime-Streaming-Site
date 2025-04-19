@@ -1,60 +1,108 @@
-# H!Anime Website
-**H!Anime** is a an anime streaming website featuring a variety of anime series and movies. Its built using HTML, CSS, Bootstrap, and JavaScript. It features dynamic content loading, modal trailers, search functionality, and smooth navigation through different categories like Movies, TV Series, Popular Anime, and Top Airing Anime.
+# H!Anime Website 🎌
+Anime Webpage is a dynamic anime streaming-style site with user login, profile updates, search, and categorized anime pages, built using HTML, CSS, JS, PHP, and MySQL.
+
+## 📖 Project Description
+Anime Webpage is a dynamic, anime-themed streaming-style website designed for users to explore, search, and view detailed information about movies, TV series, popular titles, and top-airing anime. The site includes user authentication features, allowing visitors to register, log in, manage their profiles, and update their credentials or profile picture. This project serves as a practical demonstration of full-stack web development using HTML, CSS, JavaScript, PHP, and MySQL with dynamic and reusable components.
+
+The site structure mimics real-world platforms like Crunchyroll or Netflix, but with a focus on anime content. It's ideal for showcasing front-end styling, modular JavaScript, and secure back-end login systems with file upload capability.
+
+## 💡 Use Cases
+### 🔐 1. User Authentication
+- Login / Register Modal: Users can log in or sign up directly from the navbar modal.
+- Sessions: User sessions are maintained using PHP to display personalized messages and restrict unauthorized access.
+
+### 👤 2. User Profile Management
+- Profile Page: Logged-in users can:
+- Update their email.
+- Change their password.
+- Upload or change their profile picture (image only).
+
+### 🎬 3. Anime Content Browsing
+- Movies Section: Displays anime movies.
+- TV Series Section: Displays popular series.
+- Popular Page: Highlights the most viewed or trending anime.
+- Top Airing Page: Displays current top-airing anime series.
+
+### 🔍 4. Search Functionality
+- Search Bar: Allows users to type anime names and view results on a separate page (search-results.html).
+- Suggestions & Filters: Helps users quickly find their favorite shows.
+
+### 🧩 5. Reusable Components
+- Navbar/Footer: Modular components (navbar.php, footer.html) are dynamically loaded for consistency across all pages.
+
+### 📁 6. File Upload
+- Profile Picture Upload: Only images are accepted and securely stored in the uploads/ folder.
 
 ## 📺 Demo
 You can view the live demo here: [H!Anime](https://anime-webpage-tanishavyastvs-projects.vercel.app/)
 
 ## 📁 Folder Structure
 ```
-H!Anime/
-├── photos/                  # Anime image assets
-├── index.html               # Home page
-├── movies.html              # Movies listing
-├── series.html              # TV Series listing
-├── popular.html             # Popular anime page
-├── top-airing.html          # Top airing anime
-├── search-results.html      # Search results page
-├── navbar.html              # Shared navigation bar
-├── footer.html              # Shared footer
-├── movies.js                # JS logic for Movies
-├── series.js                # JS logic for TV Series
-├── popular.js               # JS logic for Popular page
-├── top-airing.js            # JS logic for Top Airing anime
-├── search-results.js        # JS logic for search results
-├── navbar.js                # Enhancements for navbar (if any)
-├── main.css                 # Core styles
-├── index.css                # Styles for Home page
-├── fullsite.css             # Global or legacy styles
-├── fullsite.js              # Global or legacy JS functionality
-└── README.md                # Project documentation
+anime-webpage/
+│
+├── photos/                   # Default static assets like fallback profile pictures
+├── uploads/                  # Stores user-uploaded profile images
+│
+├── db.php                    # Database connection file
+│
+├── index.html                # Landing page
+├── index.css                 # Styles for landing page
+│
+├── fullsite.html             # Full site UI
+├── fullsite.css              # Styles for full site
+├── fullsite.js               # JS for full site logic
+│
+├── login-model.css           # Styles for login modal
+├── login-model.js            # JS to control modal behavior
+├── login.php                 # Login handler
+├── logout.php                # Logout script
+├── login-model.php           # Login modal backend integration
+│
+├── profile.php               # User profile page (email/password/profile-pic updates)
+│
+├── navbar.php                # Common navigation bar
+├── navbar.js                 # JS to load navbar dynamically
+├── footer.html               # Common footer
+├── main.css                  # Shared styles
+│
+├── movies.html               # Movies section
+├── movies.js                 # JS for dynamic movie content
+│
+├── series.html               # Series section
+├── series.js                 # JS for dynamic series content
+│
+├── popular.html              # Popular anime
+├── popular.js                # JS for popular anime content
+│
+├── top-airing.html           # Top-airing anime
+├── top-airing.js             # JS for top-airing section
+│
+├── search-results.html       # Displays search results
+├── search-results.js         # JS for search functionality
+│
+└── README.md                 # Project documentation
 ```
 
-## 💡 Features
-- 📺 *Categorized pages:* Movies, Series, Popular, and Top Airing.
-- 🔍 *Anime Search:* Search bar functionality with separate results page.
+## ✨ Features
+- 🔐 *User Login & Registration (modal-based)*
+- 👤 *Profile page with:*
+-- Email update
+-- Password change
+-- Profile picture upload
+- 📺 *Dynamic Anime Sections:*
+-- Movies
+-- Series
+-- Popular
+-- Top Airing
+- 🔍 *Search functionality*
+- 🧩 *Reusable components* (navbar.php, footer.html)
 - 🎞️ *Modal-based* anime trailers and info popups.
-- 🖼️ *Dynamic content* loading using JavaScript arrays.
-- 🔄 *Reusable layout* with `navbar.html` and `footer.html`.
-- 📱 *Fully responsive* layout using Bootstrap.
 - 🚥 *Horizontal Carousel* for displaying featured anime.
 - 🎴 *Anime Cards* with images, titles, descriptions, and watch buttons.
 - 👐🏻 *Category Section* to browse anime by different genres.
 - 🔥 *Stylish Animations* and hover effects to enhance user interaction.
 
-## 🚀 How to Run Locally
-1. Clone or download the repository.
-2. Open `index.html` in your preferred browser.
-3. Make sure all files remain in the correct folder structure.
-4. To edit or add anime cards, update respective JS files (e.g., `movies.js`, `series.js`).
-
 ## 🛠️ Tech Stack
-- **HTML5**: Structure and content of the webpage.
-- **CSS3**: Styling, including Flexbox, transitions, and hover effects.
-- **Bootstrap 5**: For responsive grid system and carousel component.
-- **JavaScript (ES6)**: Dynamic content loading via jQuery and Bootstrap functionality.
-- **jQuery**: For loading external content (Navbar and Footer).
-
-## 📌 Notes
-- Keep image paths consistent for dynamic loading to work correctly.
-- Ensure trailers are embedded YouTube links using the `/embed/` format.
-- Buttons and modals use Bootstrap classes for styling and responsiveness.
+- **Frontend**: HTML, CSS (Bootstrap + custom), JavaScript
+- **Backend**: PHP, MySQL
+- **Storage**: File system for images (uploads/), MySQL for user data
