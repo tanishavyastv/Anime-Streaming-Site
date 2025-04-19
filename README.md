@@ -86,14 +86,14 @@ anime-webpage/
 ## ✨ Features
 * 🔐 *User Login & Registration (modal-based)*
 * 👤 *Profile page with:*
-* Email update
-* Password change
-* Profile picture upload
+** Email update
+** Password change
+** Profile picture upload
 * 📺 *Dynamic Anime Sections:*
-* Movies
-* Series
-* Popular
-* Top Airing
+** Movies
+** Series
+** Popular
+** Top Airing
 * 🔍 *Search functionality*
 * 🧩 *Reusable components* (navbar.php, footer.html)
 * 🎞️ *Modal-based* anime trailers and info popups.
