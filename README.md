@@ -8,8 +8,8 @@ The site structure mimics real-world platforms like Crunchyroll or Netflix, but 
 
 ## 💡 Use Cases
 ### 🔐 1. User Authentication
-- Login / Register Modal: Users can log in or sign up directly from the navbar modal.
-- Sessions: User sessions are maintained using PHP to display personalized messages and restrict unauthorized access.
+- **Login / Register Modal:** Users can log in or sign up directly from the navbar modal.
+- **Sessions:** User sessions are maintained using PHP to display personalized messages and restrict unauthorized access.
 
 ### 👤 2. User Profile Management
 - Profile Page: Logged-in users can:
