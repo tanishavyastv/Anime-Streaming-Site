@@ -1,8 +1,3 @@
-$(function () {
-  $("#navbar").load("navbar.php");
-  $("#footer").load("footer.html");
-});
-
 const popularAnime = [
   {
     title: "Naruto",

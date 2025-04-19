@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_name'])) {
 }
 
 $user_name = $_SESSION['user_name'];
-$email = $_SESSION['email'];
+$email = $_SESSION['email'] ?? '';
 
 $message = "";
 $upload_error = "";

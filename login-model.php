@@ -3,8 +3,8 @@
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content bg-dark text-white">
-      <div class="modal-header">
-        <h5 class="modal-title">User Login / Signup</h5>
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title text-center">User Login / Signup</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body d-flex flex-column justify-content-center align-items-center">

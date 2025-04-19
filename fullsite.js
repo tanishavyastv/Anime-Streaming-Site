@@ -1,8 +1,3 @@
-$(function () {
-    $("#navbar").load("navbar.php");
-    $("#footer").load("footer.html");
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     const genreMap = {
         1: "Action",

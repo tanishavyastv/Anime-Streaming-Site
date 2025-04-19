@@ -35,6 +35,7 @@
     font-size: 2rem;
     font-family: var(--font-title);
     color: var(--color-primary);
+    text-align: center;
 }
 
 /* Form Styles */
@@ -111,4 +112,13 @@ form .form-control:focus {
     display: none;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+
+#loginForm, #registerForm {
+    margin: 40px auto;
+    padding: 2.5rem 3rem;
+    background-color: var(--color-card-bg);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px var(--color-card-shadow);
+    
 }

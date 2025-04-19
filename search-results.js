@@ -1,6 +1,3 @@
-$("#navbar").load("navbar.php");
-$("#footer").load("footer.html");
-
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get('query');
 
