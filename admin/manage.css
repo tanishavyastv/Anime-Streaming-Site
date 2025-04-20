@@ -1,6 +1,7 @@
+body {
+    margin-bottom: 50px;
+}
 
-
-/* Table Styling */
 table {
     width: 100%;
     margin-top: 20px;
@@ -26,7 +27,6 @@ table tbody tr:hover {
     background-color: #e9ecef;
 }
 
-/* Form Styling */
 form {
     background-color: #ffffff;
     padding: 20px;
@@ -34,16 +34,10 @@ form {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-form .form-label {
+form .form-control {
     font-weight: bold;
 }
 
-form .form-control {
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-/* Buttons */
 button {
     background-color: #007bff;
     color: #ffffff;
@@ -57,29 +51,3 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-
-/* Alerts */
-.alert {
-    margin-top: 20px;
-}
-
-/* Profile Section */
-.profile-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.profile-section img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
-
-.profile-section input[type="file"] {
-    margin-top: 10px;
-}
-
-

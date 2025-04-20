@@ -6,7 +6,7 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] != 1) {
     exit;
 }
 
-require 'db.php';
+require '../db.php';
 
 // Fetch activity log data
 $sql = "SELECT * FROM activity_log ORDER BY timestamp DESC";
@@ -19,13 +19,13 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <title>Activity Log</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../main.css">
+
 </head>
 <body>
+<?php include('admin-nav.php'); ?>
     <div class="container my-5">
-        <h2 class="mb-4 text-center">Admin Activity Log</h2>
-        
-        <?php include('admin-nav.php'); ?>
+        <h2 class="mb-4">Admin Activity Log</h2>
 
         <?php if ($result && $result->num_rows > 0): ?>
             <table class="table table-bordered table-striped">

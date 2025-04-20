@@ -29,6 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_name'] = $user['name'];
                 $_SESSION['email'] = $email;
                 $_SESSION['is_admin'] = $user['is_admin']; // Store admin status
+                if ($user['is_admin'] == 1) {
+                    $action = "Admin logged in";
+                    $logStmt = $conn->prepare("INSERT INTO activity_log (user_email, action) VALUES (?, ?)");
+                    $logStmt->bind_param("ss", $email, $action);
+                    $logStmt->execute();
+                }                
 
                 $response = [
                     'status'  => 'success',
@@ -67,6 +73,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_name'] = $name;
                 $_SESSION['email'] = $email;
                 $_SESSION['is_admin'] = 0; // New users are not admins
+                $action = "New user registered";
+                $logStmt = $conn->prepare("INSERT INTO activity_log (user_email, action) VALUES (?, ?)");
+                $logStmt->bind_param("ss", $email, $action);
+                $logStmt->execute();
 
                 $response = [
                     'status'  => 'success',
