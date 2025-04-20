@@ -62,10 +62,17 @@ body {
     text-transform: uppercase;
     color: var(--color-text);
     transition: color 0.3s ease;
+    margin-right: 5px;
 }
 
 .navbar-nav .nav-link:hover {
     color: var(--color-btn-yellow);
+}
+
+.adminDash:hover {
+    background-color: var(--color-secondary-hover);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (max-width: 768px) {

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,48 +19,37 @@
             <a class="navbar-brand" href="index.html">
                 <img src="photos/logo.png" alt="h!anime" width="170">
             </a>
-            <!-- Navbar Links -->
+
+            <!-- Navbar Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="movies.html">Movies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="series.html">TV Series</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="popular.html">Most Popular</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="top-airing.html">Top Airing</a>
-                    </li>
-                    <li class="nav-item">
-                    <?php session_start(); ?>
+                    
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="series.html">TV Series</a></li>
+                    <li class="nav-item"><a class="nav-link" href="popular.html">Most Popular</a></li>
+                    <li class="nav-item"><a class="nav-link" href="top-airing.html">Top Airing</a></li>
+
                     <?php if (!empty($_SESSION['user_name'])): ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="profile.php">Profile</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center">
-                            <span class="navbar-text text-white mx-2">
-                                Welcome, <?= htmlspecialchars($_SESSION['user_name']) ?>
-                            </span>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
-                        </li>
-                        <?php else: ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-                            </li>
+                        <?php if (!empty($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1): ?>
+                            <li class="nav-item"><a class="nav-link text-warning adminDash" href="admin/dashboard.php">Admin Dashboard</a></li>
                         <?php endif; ?>
-                    </li>
+                        <li class="nav-item"><a class="nav-link text-warning adminDash" href="profile.php">Profile</a></li>
+                        <li class="nav-item d-flex align-items-center">
+                            <span class="navbar-text text-white mx-2">Welcome, <?= htmlspecialchars($_SESSION['user_name']) ?></span>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-warning adminDash" href="logout.php">Logout</a></li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning adminDash" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
 

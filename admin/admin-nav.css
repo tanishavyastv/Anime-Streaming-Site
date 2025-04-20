@@ -1,0 +1,79 @@
+.title {
+    background: linear-gradient(rgba(136, 134, 187, 0.9), rgba(82, 80, 133, 0.9));
+    padding: 20px;
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 50px;
+}
+
+.admin-title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    text-align: center;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
+}
+
+.admin-nav {
+    margin: 30px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.admin-nav .btn {
+    padding: 8px 16px !important;
+    line-height: 1.2 !important;
+    vertical-align: middle !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 6px 15px var(--color-card-shadow);
+}
+
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.admin-nav .btn:hover {
+    box-shadow: 0 8px 20px var(--color-card-shadow-hover);
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-pink {
+    color: hotpink;
+    border: 2px solid hotpink;
+}
+
+.btn-outline-pink:hover {
+    background-color: hotpink;
+    color: #1e1d2b;
+}
+
+.btn-back {
+    background: linear-gradient(to right, #a471f1, #d277f2);;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+    box-shadow: 0 0 10px #9b59b6, 0 0 20px #8e44ad;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-back:hover {
+    background-color: #8e44ad;
+    box-shadow: 0 0 15px #8e44ad, 0 0 25px #9b59b6;
+    color: #fff;
+    transform: scale(1.05);
+}

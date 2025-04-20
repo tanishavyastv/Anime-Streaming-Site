@@ -1,0 +1,24 @@
+.admin-card {
+    color: var(--color-bg);
+    border-radius: 15px;
+    margin-top: 4rem;
+    padding: 150px 30px;
+    box-shadow: 0 10px 30px var(--color-card-shadow);
+    background-image: url('../photos/dashboard.webp');
+    background-size: cover;
+    text-shadow: 2px 2px 2px white, -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white;
+    font-weight: bold;
+}
+
+.admin-card:hover {
+    color: var(--color-primary-dark);
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px var(--color-card-shadow-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}

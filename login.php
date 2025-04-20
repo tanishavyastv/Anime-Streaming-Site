@@ -18,28 +18,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // ----- LOGIN -----
     if ($type === 'login') {
-        $email    = $conn->real_escape_string($_POST['loginEmail']    ?? '');
+        $email    = $conn->real_escape_string($_POST['loginEmail'] ?? '');
         $password = $_POST['loginPassword'] ?? '';
 
-        $res = $conn->query("SELECT name, password FROM users WHERE email='$email'");
+        $res = $conn->query("SELECT name, password, is_admin FROM users WHERE email='$email'");
         if ($res && $res->num_rows === 1) {
             $user = $res->fetch_assoc();
             if (password_verify($password, $user['password'])) {
-                // Success: set session and respond
+                // Success: set session
                 $_SESSION['user_name'] = $user['name'];
+                $_SESSION['email'] = $email;
+                $_SESSION['is_admin'] = $user['is_admin']; // Store admin status
+
                 $response = [
                     'status'  => 'success',
                     'message' => 'Login successful!'
                 ];
             } else {
-                // Wrong password
                 $response = [
                     'status'  => 'error',
                     'message' => 'Wrong password.'
                 ];
             }
         } else {
-            // Email not found
             $response = [
                 'status'  => 'error',
                 'message' => 'Email not registered.'
@@ -48,11 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // ----- REGISTER -----
     } elseif ($type === 'register') {
-        $name     = $conn->real_escape_string($_POST['registerName']     ?? '');
-        $email    = $conn->real_escape_string($_POST['registerEmail']    ?? '');
+        $name     = $conn->real_escape_string($_POST['registerName'] ?? '');
+        $email    = $conn->real_escape_string($_POST['registerEmail'] ?? '');
         $password = $_POST['registerPassword'] ?? '';
 
-        // Check if email already exists
         $check = $conn->query("SELECT id FROM users WHERE email='$email'");
         if ($check && $check->num_rows > 0) {
             $response = [
@@ -60,12 +60,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'message' => 'Email already registered.'
             ];
         } else {
-            // Insert new user
-            $hash   = password_hash($password, PASSWORD_DEFAULT);
-            $stmt   = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $name, $email, $hash);
             if ($stmt->execute()) {
                 $_SESSION['user_name'] = $name;
+                $_SESSION['email'] = $email;
+                $_SESSION['is_admin'] = 0; // New users are not admins
+
                 $response = [
                     'status'  => 'success',
                     'message' => 'Registration successful!'
@@ -81,7 +83,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 echo json_encode($response);
-
 $conn->close();
 exit;
 ?>
