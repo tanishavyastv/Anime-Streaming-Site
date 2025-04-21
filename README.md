@@ -144,7 +144,7 @@ ANIME-WEBPAGE/
     - *Category Section* to explore by genres or types.
 - **💅 Visual & UX Enhancements**
     - Custom *hover effects*, *animations*, and *responsive layout*.
-    - Styled using *Bootstrap*, custom *CSS*, and interactive* JavaScript*.
+    - Styled using *Bootstrap*, custom *CSS*, and interactive *JavaScript*.
 
 ## 🛠️ Tech Stack
 ### 🌐 Frontend
