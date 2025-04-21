@@ -147,6 +147,19 @@ ANIME-WEBPAGE/
     - Styled using *Bootstrap*, custom *CSS*, and interactive* JavaScript*.
 
 ## 🛠️ Tech Stack
-- **Frontend**: HTML, CSS (Bootstrap + custom), JavaScript
-- **Backend**: PHP, MySQL
-- **Storage**: File system for images (`uploads/`), MySQL for user data
+### 🌐 Frontend
+- **HTML5 –** For semantic and structured content layout
+- **CSS3 –** Custom styles for pages and components
+- **Bootstrap –** Responsive grid and UI components
+- **JavaScript (Vanilla) –** Dynamic interactivity, modal control, content rendering
+- **Modular JS –** Separated `.js` files for each section (movies, series, search, etc.)
+
+### 🔙 Backend
+- **PHP –** Server-side scripting for login, registration, profile, and admin operations
+- **MySQL –** Relational database for storing user credentials, anime data, and admin logs
+- **Session Management –** PHP sessions for login persistence and access control
+
+### 🗃️ Database & File Handling
+- **MySQL Tables –** For users, anime content, and admin activity logs
+- **Uploads Folder –** For storing user-uploaded profile pictures (with validation)
+- **CRUD Operations –** Admin can perform Create, Read, Update, Delete actions on anime and user data
