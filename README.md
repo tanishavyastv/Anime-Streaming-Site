@@ -8,101 +8,145 @@ The site structure mimics real-world platforms like Crunchyroll or Netflix, but 
 
 ## 💡 Use Cases
 ### 🔐 1. User Authentication
-- **Login / Register Modal:** Users can log in or sign up directly from the navbar modal.
-- **Sessions:** User sessions are maintained using PHP to display personalized messages and restrict unauthorized access.
+- **Login / Register Modal:** Users can log in or sign up directly from the navbar.
+- **Session Handling:** Maintains user sessions using PHP for secure access control.
+- **Personalized Experience:** Logged-in users are greeted with custom messages and gain access to profile features.
 
 ### 👤 2. User Profile Management
-- **Profile Page:** Logged-in users can:
-- Update their email.
-- Change their password.
-- Upload or change their profile picture (image only).
+- **Edit Profile:** Users can update their email and password.
+- **Profile Picture Upload:** Users can upload or change their profile image (image files only).
+- **Secure Data Handling:** All updates are securely validated and stored in the database.
 
 ### 🎬 3. Anime Content Browsing
-- **Movies Section:** Displays anime movies.
-- **TV Series Section:** Displays popular series.
-- **Popular Page:** Highlights the most viewed or trending anime.
-- **Top Airing Page:** Displays current top-airing anime series.
+- **Dedicated Sections:**
+    - **Movies Page:** Lists anime movies.
+    - **TV Series Page:** Lists anime series.
+    - **Popular Page:** Displays trending anime.
+    - **Top Airing Page:** Shows currently airing popular anime.
+- **Dynamic Cards:** Each anime has a card with title, image, description, and trailer modal.
 
 ### 🔍 4. Search Functionality
-- **Search Bar:** Allows users to type anime names and view results on a separate page (search-results.html).
-- **Suggestions & Filters:** Helps users quickly find their favorite shows.
+- **Global Search Bar:** Located in the navbar and accessible from any page.
+- **Search Results Page:** Dynamically lists anime matching the query.
+- **Quick Navigation:** Allows users to find their favorite shows efficiently.
 
-### 🧩 5. Reusable Components
-- **Navbar/Footer:** Modular components (navbar.php, footer.html) are dynamically loaded for consistency across all pages.
+### 🧑‍💻 5. Admin Dashboard
+- **Dashboard Overview:** Admin can access a centralized dashboard for management.
+- **Manage Anime:** Add, update, or delete anime entries in the database.
+- **Manage Users:** View all registered users and their details.
+- **Activity Log:** Monitor user/admin actions for transparency and control.
+- **Modular Design:** Clean, separate sections styled with custom CSS.
 
-### 📁 6. File Upload
-- **Profile Picture Upload:** Only images are accepted and securely stored in the uploads/ folder.
+### 🧩 6. Modular Components
+- **Navbar and Footer:** Included using PHP/JS for reusability and consistency.
+- **Scalable Design:** Makes adding new pages or sections easier with consistent layout.
+
+### 📁 7. File Upload
+- **Profile Picture Upload:** Users can upload images which are securely saved to the `uploads/` directory.
+- **Validated Uploads:** Backend validation ensures only image types are accepted.
 
 ## 📺 Demo
 You can view the live demo here: [H!Anime](https://anime-webpage-tanishavyastvs-projects.vercel.app/)
 
 ## 📁 Folder Structure
 ```
-anime-webpage/
+ANIME-WEBPAGE/
 │
-├── photos/                   # Default static assets like fallback profile pictures
-├── uploads/                  # Stores user-uploaded profile images
+├── admin/                     # Admin dashboard and management tools
+│   ├── activity-log.php       # View admin activity logs
+│   ├── admin-nav.css          # Styles for admin navbar
+│   ├── admin-nav.php          # Reusable admin navigation bar
+│   ├── dashboard.php          # Admin dashboard overview
+│   ├── dashboard.css          # Styles for dashboard
+│   ├── manage-anime.php       # Admin page to manage anime content
+│   ├── manage-users.php       # Admin page to manage registered users
+│   └── manage.css             # Shared styles for admin pages
 │
-├── db.php                    # Database connection file
+├── photos/                    # Default assets (e.g., fallback profile pics)
+├── uploads/                   # Uploaded user profile images
 │
-├── index.html                # Landing page
-├── index.css                 # Styles for landing page
+├── db.php                     # Database connection
 │
-├── fullsite.html             # Full site UI
-├── fullsite.css              # Styles for full site
-├── fullsite.js               # JS for full site logic
+├── index.html                 # Landing page
+├── index.css                  # Styles for landing page
 │
-├── login-model.css           # Styles for login modal
-├── login-model.js            # JS to control modal behavior
-├── login.php                 # Login handler
-├── logout.php                # Logout script
-├── login-model.php           # Login modal backend integration
+├── fullsite.html              # Core site layout
+├── fullsite.css               # Styling for main layout
+├── fullsite.js                # JS for dynamic section handling
 │
-├── profile.php               # User profile page (email/password/profile-pic updates)
+├── login-model.php            # Login/registration modal backend
+├── login-model.css            # Modal styles
+├── login-model.js             # Modal control JS
 │
-├── navbar.php                # Common navigation bar
-├── navbar.js                 # JS to load navbar dynamically
-├── footer.html               # Common footer
-├── main.css                  # Shared styles
+├── login.php                  # Login handler script
+├── logout.php                 # Logout handler
 │
-├── movies.html               # Movies section
-├── movies.js                 # JS for dynamic movie content
+├── profile.php                # User profile update page
 │
-├── series.html               # Series section
-├── series.js                 # JS for dynamic series content
+├── navbar.php                 # Navbar template
+├── navbar.js                  # JS to load navbar dynamically
+├── footer.html                # Footer template
 │
-├── popular.html              # Popular anime
-├── popular.js                # JS for popular anime content
+├── main.css                   # Shared styles for all pages
 │
-├── top-airing.html           # Top-airing anime
-├── top-airing.js             # JS for top-airing section
+├── movies.html                # Anime movies page
+├── movies.js                  # Movies content generator
 │
-├── search-results.html       # Displays search results
-├── search-results.js         # JS for search functionality
+├── series.html                # TV series page
+├── series.js                  # Series content logic
 │
-└── README.md                 # Project documentation
+├── popular.html               # Popular anime page
+├── popular.js                 # Popular anime logic
+│
+├── top-airing.html            # Top airing anime page
+├── top-airing.js              # Logic for top airing section
+│
+├── search-results.html        # Search results display
+├── search-results.js          # JS for searching anime
+│
+└── README.md                  # Project documentation
 ```
 
 ## ✨ Features
-- 🔐 **User Login & Registration (modal-based)**
-- 👤 **Profile page with:**
-    - Email update
-    - Password change
-    - Profile picture upload
-- 📺 **Dynamic Anime Sections:**
-    - Movies
-    - Series
-    - Popular
-    - Top Airing
+- 🔐 **User Authentication**
+    - Login / Register Modal directly from the navbar.
+    - PHP session-based login system for security and personalized experiences.
+    - Logout functionality to end sessions securely.
+- 👤 **Profile Management**
+    - Dedicated profile page where users can:
+        - Update their email address.
+        - Change their password.
+        - Upload or change their profile picture (supports only images).
+- 📺 **Anime Content Browsing**
+    - *Movies Page:* Explore anime movie cards with trailers and descriptions.
+    - *TV Series Page:* View top anime series.
+    - *Popular Page:* Browse trending or most viewed anime.
+    - *Top Airing Page:* Check out currently airing popular titles.
 - 🔍 **Search functionality**
-- 🧩 **Reusable components** (navbar.php, footer.html)
-- 🎞️ **Modal-based** anime trailers and info popups.
-- 🚥 **Horizontal Carousel** for displaying featured anime.
-- 🎴 **Anime Cards** with images, titles, descriptions, and watch buttons.
-- 👐🏻 **Category Section** to browse anime by different genres.
-- 🔥 **Stylish Animations** and hover effects to enhance user interaction.
+    - *Live Search Bar:* Users can search anime by name.
+    - *Search Results Page:* Shows filtered results with dynamic content.
+    - *Auto-suggestions & filtering* improve search experience.
+- 🧩 **Reusable & Modular Components**
+    - *Navbar* and *footer* are modular and loaded dynamically using JavaScript/PHP.
+    - Ensures consistency across all pages and easy maintenance.
+- **🧑‍💻 Admin Dashboard**
+    - *Admin Login Interface* (planned or in future scope).
+    - *Manage Users:* View and control registered users.
+    - *Manage Anime:* Add, edit, or remove anime content.
+    - *View Activity Logs:* Track actions done by the admin.
+    - Clean and styled using custom admin CSS modules.
+- **🗂️ File Upload Support**
+    - Secure *image uploads* for profile pictures.
+    - Stored in the `uploads/` folder and validated on the backend.
+- **🎞️ Interactive UI Elements**
+    - *Modal-based trailers* and detailed anime info popups.
+    - *Horizontal carousels* for featured anime.
+    - *Category Section* to explore by genres or types.
+- **💅 Visual & UX Enhancements**
+    - Custom *hover effects*, *animations*, and *responsive layout*.
+    - Styled using *Bootstrap*, custom *CSS*, and interactive* JavaScript*.
 
 ## 🛠️ Tech Stack
 - **Frontend**: HTML, CSS (Bootstrap + custom), JavaScript
 - **Backend**: PHP, MySQL
-- **Storage**: File system for images (uploads/), MySQL for user data
+- **Storage**: File system for images (`uploads/`), MySQL for user data
