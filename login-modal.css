@@ -1,0 +1,53 @@
+.modal-fullscreen .modal-content {
+    background-color: #121212;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#loginForm {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 400px;
+}
+
+#loginForm .form-label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#loginForm .form-control {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+#loginForm .form-control:focus {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #ffc107;
+    box-shadow: none;
+}
+
+#loginForm button {
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.modal.fade .modal-dialog {
+    transition: transform 0.4s ease-out;
+    transform: translateY(-50px);
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
