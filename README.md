@@ -164,46 +164,60 @@ ANIME-WEBPAGE/
 - **Uploads Folder –** For storing user-uploaded profile pictures (with validation)
 - **CRUD Operations –** Admin can perform Create, Read, Update, Delete actions on anime and user data
 
+## 📺Interface
 ### Home Page
+---
 ![image](https://github.com/user-attachments/assets/2283182d-010b-49cf-a5b2-91c48f3958af)
 ![image](https://github.com/user-attachments/assets/000c36d3-2d2b-496f-a4a1-0abe3fd528ba)
 
 ### Full Site
+---
 ![image](https://github.com/user-attachments/assets/8052787b-f063-4cbd-bb20-c31430825563)
 ![image](https://github.com/user-attachments/assets/3a4f7259-10d7-4cdd-aadd-31e1db90a47c)
 ![image](https://github.com/user-attachments/assets/ae3102da-b7ab-4161-98bd-3f29ccdeef79)
 
 ### Movies Section
+---
 ![image](https://github.com/user-attachments/assets/d74d2401-7578-4fc8-bfa8-103353e21dd9)
 ![image](https://github.com/user-attachments/assets/05269324-bfaa-4cfa-a95c-49037bda6874)
 ![image](https://github.com/user-attachments/assets/60f68d18-d6a2-48f8-92e2-066acc5f26de)
 
 ### Search Bar and Results
+---
 ![image](https://github.com/user-attachments/assets/d6076c6e-8834-4964-8551-f3855ddb3120)
 ![image](https://github.com/user-attachments/assets/cc46a9f5-90d8-417b-8a21-1b65f4c79627)
 
 ### Admin
-## Dashboard
+---
+#### Dashboard
+---
 ![image](https://github.com/user-attachments/assets/6f3946e7-6e76-46ae-9a40-4dfd03042a67)
 
-## Manage Users
+#### Manage Users
+---
 ![image](https://github.com/user-attachments/assets/88c8ec8d-be42-4a2a-9295-8b8a345abe9f)
 
-## Manage Anime
+#### Manage Anime
+---
 ![image](https://github.com/user-attachments/assets/4e943345-569c-4e7e-8e9a-585390bf6f48)
 
-## Activity Log
+#### Activity Log
+---
 ![image](https://github.com/user-attachments/assets/98ddff8d-3d60-44ba-96e4-97f115943899)
 
 ### Sample Input & Output
+---
 ![image](https://github.com/user-attachments/assets/1e270188-77f8-4c67-a0a6-935290d19b31)
 ![image](https://github.com/user-attachments/assets/7c02a947-ba12-4a5f-99b0-b368e0291fe1)
 
+---
 ![image](https://github.com/user-attachments/assets/17b082a6-0d64-4203-bf55-e7c89e382233)
 ![image](https://github.com/user-attachments/assets/092e5cf9-cc59-46a4-856f-14dc16025b67)
 
+---
 ![image](https://github.com/user-attachments/assets/daebbe5d-5ab1-4862-95df-fa0315d60dc9)
 ![image](https://github.com/user-attachments/assets/bf1b8fdd-1d17-434b-b38b-2f0f76272982)
 
+---
 ![image](https://github.com/user-attachments/assets/e959d116-e9de-40ac-a929-69c9598df947)
 ![image](https://github.com/user-attachments/assets/e987e952-7456-456a-a673-5f7d434c9070)
