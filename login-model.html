@@ -1,5 +1,12 @@
+<<<<<<< Updated upstream
 <link rel="stylesheet" href="login-model.css">
 
+=======
+<!-- login-modal.php -->
+<link rel="stylesheet" href="login-model.css">
+
+<!-- Login/Register Modal -->
+>>>>>>> Stashed changes
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content bg-dark text-white">
@@ -8,6 +15,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+<<<<<<< Updated upstream
                 
                 <!-- Tab Navigation -->
                 <ul class="nav nav-pills mb-3" id="login-register-tabs" role="tablist">
@@ -55,6 +63,26 @@
                         </form>
                     </div>
                 </div>
+=======
+                <form id="loginForm" method="POST" action="login.php" style="max-width:400px; width:100%;">
+                    <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required />
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" name="login" class="btn btn-outline-light">Login</button>
+                        <button type="submit" name="register" class="btn btn-outline-warning">Register</button>
+                    </div>
+                </form>
+>>>>>>> Stashed changes
             </div>
         </div>
     </div>

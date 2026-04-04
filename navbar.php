@@ -29,6 +29,7 @@
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+<<<<<<< Updated upstream
                     
                 <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
@@ -50,6 +51,34 @@
                             <a class="nav-link text-warning adminDash" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                         </li>
                     <?php endif; ?>
+=======
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="series.html">TV Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="popular.html">Most Popular</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="top-airing.html">Top Airing</a>
+                    </li>
+                    <li class="nav-item">
+                        <?php session_start(); ?>
+                        <?php if (!empty($_SESSION['user_name'])): ?>
+                          <span class="navbar-text text-white mx-2">
+                            Welcome, <?= htmlspecialchars($_SESSION['user_name']) ?>
+                          </span>
+                          <a class="nav-link" href="logout.php">Logout</a>
+                        <?php else: ?>
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                        <?php endif; ?>
+                    </li>
+>>>>>>> Stashed changes
                 </ul>
             </div>
 
