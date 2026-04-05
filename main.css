@@ -127,8 +127,9 @@ body.has-global-loader {
     display: grid;
     grid-template-columns: 1fr auto auto;
     grid-template-areas:
-        "brand utility toggle"
-        "nav nav nav";
+        "brand auth toggle"
+        "nav nav nav"
+        "search search search";
     gap: 1rem 1.25rem;
     align-items: start;
     padding: 0;
@@ -211,12 +212,13 @@ body.has-global-loader {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    padding: 0.5rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 .nav-toggle {
@@ -305,32 +307,36 @@ body.has-global-loader {
 }
 
 .nav-utility {
-    grid-area: utility;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    align-self: start;
-    gap: 0.75rem;
 }
 
 .nav-auth-slot {
+    grid-area: auth;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 0.55rem;
-    width: 100%;
+    min-width: 180px;
 }
 
 .nav-auth-link {
     min-width: 108px;
 }
 
+.nav-auth-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.55rem;
+}
+
 .search-shell-card {
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
-    min-width: 360px;
+    width: min(100%, 430px);
     padding: 0.8rem 0.9rem 0.9rem;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -340,19 +346,17 @@ body.has-global-loader {
     -webkit-backdrop-filter: blur(18px);
 }
 
-.search-shell-label {
-    font-size: 0.66rem;
-    text-transform: uppercase;
-    letter-spacing: 0.24em;
-    color: rgba(255, 255, 255, 0.55);
-    text-align: center;
-}
-
 .search-shell {
     display: flex;
     align-items: center;
     gap: 0.7rem;
     width: 100%;
+}
+
+.nav-search-row {
+    grid-area: search;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .search-input-wrap {
@@ -425,8 +429,9 @@ body.has-global-loader {
         grid-template-columns: 1fr auto;
         grid-template-areas:
             "brand toggle"
-            "utility utility"
+            "auth auth"
             "nav nav";
+            "search search";
         gap: 0.85rem;
     }
 
@@ -471,15 +476,22 @@ body.has-global-loader {
     }
 
     .search-shell-card {
-        min-width: 100%;
+        width: 100%;
     }
 
     .search-shell {
         width: 100%;
     }
 
-    .nav-utility {
+    .nav-auth-slot,
+    .nav-search-row {
         justify-content: stretch;
+        align-items: stretch;
+    }
+
+    .nav-auth-group {
+        justify-content: stretch;
+        flex-direction: column;
     }
 }
 

@@ -4,7 +4,7 @@ async function loadFragment(targetSelector, path) {
     return;
   }
 
-  const response = await fetch(path);
+  const response = await fetch(path, { cache: "no-store" });
   target.innerHTML = await response.text();
 }
 
@@ -108,10 +108,12 @@ function renderNavbarAuth() {
   }
 
   authSlot.innerHTML = `
-    ${currentUser.isAdmin ? '<a class="nav-link nav-chip nav-chip-accent nav-auth-link" href="admin/dashboard.html">Admin</a>' : ""}
-    <a class="nav-link nav-chip nav-chip-accent nav-auth-link" href="profile.html">Profile</a>
+    <div class="nav-auth-group">
+      ${currentUser.isAdmin ? '<a class="nav-link nav-chip nav-chip-accent nav-auth-link" href="admin/dashboard.html">Admin</a>' : ""}
+      <a class="nav-link nav-chip nav-chip-accent nav-auth-link" href="profile.html">Profile</a>
+      <a class="nav-link nav-chip nav-chip-accent nav-auth-link" href="#" id="logout-link">Logout</a>
+    </div>
     <span class="navbar-text nav-user-pill">Welcome, ${escapeHtml(currentUser.name)}</span>
-    <a class="nav-link nav-chip nav-chip-accent nav-auth-link" href="#" id="logout-link">Logout</a>
   `;
 
   const logoutLink = document.getElementById("logout-link");
