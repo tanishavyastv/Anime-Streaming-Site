@@ -12,18 +12,35 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <header id="navbar"></header>
 
-    <section class="container mt-5">
-        <h2 class="mb-4 text-center text-uppercase">Top Airing</h2>
-        <div class="row g-4 mt-4" id="airingContainer"></div>
-        <div class="text-center my-4">
-            <button class="btn btn-outline-light" onclick="loadMoreAiring(event)">Show More</button>
-        </div>
-    </section>
+    <main class="page-shell">
+        <section class="page-banner">
+            <span class="page-banner__eyebrow">Now Airing</span>
+            <h1 class="page-banner__title">What’s lighting up the <span class="accent">current season</span>.</h1>
+            <p class="page-banner__copy">The airing page now reads like a weekly highlight reel, with stronger visual rhythm and a more polished browsing experience.</p>
+            <div class="page-banner__meta">
+                <span class="meta-pill">Seasonal momentum</span>
+                <span class="meta-pill">Quick trailer access</span>
+                <span class="meta-pill">Modern card system</span>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <section class="content-panel">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">Weekly Heat</span>
+                    <h2 class="section-title">Top Airing</h2>
+                </div>
+                <p class="section-copy">A cleaner layout helps currently airing shows feel fresh, urgent, and easier to compare at a glance.</p>
+            </div>
+            <div class="row g-4" id="airingContainer"></div>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-light" onclick="loadMoreAiring(event)">Show More</button>
+            </div>
+        </section>
+    </main>
+
     <footer id="footer"></footer>
 
     <script src="auth.js"></script>

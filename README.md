@@ -72,6 +72,22 @@ ANIME-WEBPAGE/
 - Email: `admin@hanime.local`
 - Password: `admin123`
 
+## Run Locally
+
+Use the included PowerShell script:
+
+```powershell
+.\run.ps1
+```
+
+Optional custom port:
+
+```powershell
+.\run.ps1 -Port 9000
+```
+
+Then open `http://localhost:8000/index.html` or your chosen port.
+
 ## Notes
 
 - Authentication is client-side and intended only for demo or learning use.

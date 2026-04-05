@@ -13,18 +13,35 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <header id="navbar"></header>
 
-    <section class="container mt-5">
-        <h2 class="mb-4 text-center text-uppercase">TV Series</h2>
-        <div class="row g-4 mt-4" id="tvSeriesContainer"></div>
-        <div class="text-center my-4">
-            <button class="btn btn-outline-light" onclick="loadMoreSeries(this)">Show More</button>
-        </div>
-    </section>
+    <main class="page-shell">
+        <section class="page-banner">
+            <span class="page-banner__eyebrow">Series Feed</span>
+            <h1 class="page-banner__title">Long-form stories built for <span class="accent">obsession</span>.</h1>
+            <p class="page-banner__copy">Browse iconic TV anime with a layout that keeps the spotlight on posters, hooks, and quick actions instead of plain page chrome.</p>
+            <div class="page-banner__meta">
+                <span class="meta-pill">Shonen and beyond</span>
+                <span class="meta-pill">Binge-ready cards</span>
+                <span class="meta-pill">Trailer previews</span>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <section class="content-panel">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">Lineup</span>
+                    <h2 class="section-title">TV Series</h2>
+                </div>
+                <p class="section-copy">The refreshed grid gives every series the same premium treatment as the homepage and full-site experience.</p>
+            </div>
+            <div class="row g-4" id="tvSeriesContainer"></div>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-light" onclick="loadMoreSeries(this)">Show More</button>
+            </div>
+        </section>
+    </main>
+
     <footer id="footer"></footer>
 
     <script src="auth.js"></script>

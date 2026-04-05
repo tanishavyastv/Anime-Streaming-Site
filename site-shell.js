@@ -89,7 +89,7 @@ function renderNavbarAuth() {
 
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const navLinkClass = (href, extra = "") =>
-    `nav-link nav-chip${currentPath === href ? " is-active" : ""}${extra ? ` ${extra}` : ""}`;
+    `nav-link nav-link-minimal${currentPath === href ? " is-active" : ""}${extra ? ` ${extra}` : ""}`;
 
   const currentUser = window.Auth.getCurrentUser();
   navLinks.innerHTML = `
