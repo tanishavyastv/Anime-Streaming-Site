@@ -75,7 +75,7 @@ function loadMorePopular(button) {
     const card = `
         <div class="col-md-4">
           <div class="anime-card p-3 h-100 w-100">
-            <img src="${anime.img}" class="img-fluid rounded card-img-top" alt="${anime.title}">
+            <img src="${anime.img}" class="img-fluid rounded card-img-top" alt="${anime.title}" loading="lazy" decoding="async">
             <h5 class="mt-3">${anime.title}</h5>
             <div class="rating mb-2">${anime.rating}</div>
             <p class="card-text">${anime.desc}</p>
@@ -99,7 +99,7 @@ function loadMorePopular(button) {
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
                 <div class="modal-body">
-                <iframe width="100%" height="400" src="${anime.trailer}" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="400" src="${anime.trailer}" frameborder="0" loading="lazy" allowfullscreen></iframe>
               </div>
             </div>
           </div>

@@ -1,0 +1,99 @@
+<nav class="site-navbar navbar navbar-expand-xl">
+  <div class="container-fluid navbar-shell">
+    <a class="navbar-brand brand-lockup" href="index.html" aria-label="H!Anime home">
+      <span class="brand-aura"></span>
+      <span class="brand-copy">
+        <span class="brand-overline">Cine Anime Archive</span>
+        <span class="brand-title">
+          <span class="brand-letter">H</span><span class="brand-bang">!</span><span class="brand-letter">Anime</span>
+        </span>
+      </span>
+    </a>
+
+    <div class="nav-utility">
+      <div id="navbar-auth-slot" class="nav-auth-slot"></div>
+      <div class="search-shell-card">
+        <div class="search-shell-label">Search</div>
+        <div class="search-shell">
+          <div class="search-input-wrap">
+            <input type="text" class="form-control search-bar" placeholder="Search your favorite anime">
+            <div id="search-suggestions" class="search-suggestions"></div>
+          </div>
+          <button class="btn search-btn" aria-label="Search">
+            <img src="photos/search.png" alt="search" width="20">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-panel">
+        <div class="nav-ribbon">
+          <ul class="navbar-nav nav-cluster" id="navbar-links"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">User Login / Signup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+        <ul class="nav nav-pills mb-3" id="login-register-tabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="login-tab" data-bs-toggle="pill" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="register-tab" data-bs-toggle="pill" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+          </li>
+        </ul>
+
+        <div class="tab-content w-100">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form id="loginForm" style="max-width:400px; width:100%;">
+              <div class="mb-3">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" name="loginEmail" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" class="form-control" required>
+              </div>
+              <p id="loginMessage" class="small mt-2" style="display:none;"></p>
+              <button type="submit" class="btn btn-outline-light">Login</button>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form id="registerForm" style="max-width:400px; width:100%;">
+              <div class="mb-3">
+                <label for="registerName">Name</label>
+                <input type="text" id="registerName" name="registerName" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" name="registerEmail" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="registerPassword" class="form-control" required>
+              </div>
+              <p id="registerMessage" class="small mt-2" style="display:none;"></p>
+              <button type="submit" class="btn btn-outline-warning">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

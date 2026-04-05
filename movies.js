@@ -76,7 +76,7 @@ function loadMoreMovies() {
     const card = `
           <div class="col-md-4">
             <div class="anime-card p-3 h-100 w-100">
-              <img src="${movie.img}" class="img-fluid rounded card-img-top" alt="${movie.title}">
+              <img src="${movie.img}" class="img-fluid rounded card-img-top" alt="${movie.title}" loading="lazy" decoding="async">
               <h5 class="mt-3">${movie.title}</h5>
               <div class="stars mb-2">${movie.rating}</div>
               <p class="card-text">${movie.desc}</p>
@@ -100,7 +100,7 @@ function loadMoreMovies() {
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                  <iframe width="100%" height="400" src="${movie.trailer}" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="100%" height="400" src="${movie.trailer}" frameborder="0" loading="lazy" allowfullscreen></iframe>
                 </div>
               </div>
             </div>

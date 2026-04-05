@@ -1,8 +1,3 @@
-$(function () {
-  $("#navbar").load("navbar.php");
-  $("#footer").load("footer.html");
-});
-
 const tvSeries = [
   {
     title: "Attack on Titan",
@@ -81,7 +76,7 @@ function loadMoreSeries(button) {
     const card = `
         <div class="col-md-4">
           <div class="anime-card p-3 h-100 w-100">
-            <img src="${series.img}" class="img-fluid rounded card-img-top" alt="${series.title}">
+            <img src="${series.img}" class="img-fluid rounded card-img-top" alt="${series.title}" loading="lazy" decoding="async">
             <h5 class="mt-3">${series.title}</h5>
             <div class="rating mb-2">${series.rating}</div>
             <p class="card-text">${series.desc}</p>
@@ -105,7 +100,7 @@ function loadMoreSeries(button) {
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
                 <div class="modal-body">
-                <iframe width="100%" height="400" src="${series.trailer}" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="400" src="${series.trailer}" frameborder="0" loading="lazy" allowfullscreen></iframe>
               </div>
             </div>
           </div>

@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 col.innerHTML = `
             <div class="anime-card-result">
                 <div class="genre-tags">${genreTags}</div>
-                <img src="${anime.images.jpg.image_url}" alt="${anime.title}">
+                <img src="${anime.images.jpg.image_url}" alt="${anime.title}" loading="lazy" decoding="async">
                 <h5 class="mt-2">${anime.title}</h5>
                 <p>${anime.synopsis ? anime.synopsis.slice(0, 100) + "..." : "No description available."}</p>
                 <a href="${anime.url}" target="_blank" class="btn btn-pink">Watch Now</a>

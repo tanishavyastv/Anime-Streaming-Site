@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Activity Log</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="admin-nav.css">
+</head>
+<body>
+  <div id="adminNav"></div>
+  <div class="container my-5">
+    <h2 class="mb-4">Admin Activity Log</h2>
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Admin Email</th>
+          <th>Action</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody id="activityLogBody"></tbody>
+    </table>
+  </div>
+
+  <script src="../auth.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
