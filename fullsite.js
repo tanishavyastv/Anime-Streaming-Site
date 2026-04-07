@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const genreMap = {
+        1: "Action",
+        2: "Adventure",
+        10: "Fantasy",
+        22: "Romance"
+    };
+
     let currentGenreId = null;
     let currentPage = 1;
 
@@ -43,17 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             data.data.forEach(anime => {
                 const col = document.createElement('div');
-                col.className = 'col-md-6 col-xl-4';
+                col.className = 'col-md-4';
 
                 const genreTags = anime.genres.map(g => `<span class="genre-tag">${g.name}</span>`).join('');
 
                 col.innerHTML = `
             <div class="anime-card-result">
                 <div class="genre-tags">${genreTags}</div>
-                <img src="${anime.images.jpg.image_url}" alt="${anime.title}" loading="lazy" decoding="async">
+                <img src="${anime.images.jpg.image_url}" alt="${anime.title}">
                 <h5 class="mt-2">${anime.title}</h5>
                 <p>${anime.synopsis ? anime.synopsis.slice(0, 100) + "..." : "No description available."}</p>
-                <a href="${anime.url}" target="_blank" rel="noopener noreferrer" class="btn btn-pink">Watch Now</a>
+                <a href="${anime.url}" target="_blank" class="btn btn-pink">Watch Now</a>
             </div>
         `;
                 grid.appendChild(col);

@@ -10,167 +10,152 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="fullsite.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="fullsite.js"></script>
 </head>
 
 <body>
+    <!-- Navbar -->
     <header id="navbar"></header>
 
-    <main class="page-shell">
-        <section class="page-banner">
-            <span class="page-banner__eyebrow">Full Experience</span>
-            <h1 class="page-banner__title">The anime hub with a more <span class="accent">premium pulse</span>.</h1>
-            <p class="page-banner__copy">This page now acts like the project centerpiece: featured highlights up top, genre browsing in the middle, and live API results below.</p>
-            <div class="page-banner__meta">
-                <span class="meta-pill">Featured carousel</span>
-                <span class="meta-pill">Genre discovery</span>
-                <span class="meta-pill">Live result grid</span>
-            </div>
-        </section>
+    <!-- Full Site Content -->
+    <section class="container mt-5">
+        <h2 class="text-center text-white mb-4">Welcome to H!Anime</h2>
 
-        <section class="content-panel mb-4">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">Featured Tonight</span>
-                    <h2 class="section-title">Spotlight Carousel</h2>
-                </div>
-                <p class="section-copy">The carousel cards now sit inside the same visual system as the rest of the redesign, so the experience feels unified.</p>
-            </div>
-
-            <div id="animeCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="featured-carousel-track">
-                            <div class="anime-card fade-in p-3">
-                                <img loading="lazy" src="photos/attackontitan.png" alt="Attack on Titan">
-                                <h5 class="mt-3">Attack on Titan</h5>
-                                <p class="card-desc">Humanity's struggle for survival against the titans in a brutal, unforgettable world.</p>
-                                <button class="btn-pink mt-auto">Watch Now</button>
-                            </div>
-                            <div class="anime-card fade-in p-3">
-                                <img loading="lazy" src="photos/naruto.png" alt="Naruto">
-                                <h5 class="mt-3">Naruto</h5>
-                                <p class="card-desc">An underdog ninja chases recognition, power, and the dream of becoming Hokage.</p>
-                                <button class="btn-pink mt-auto">Watch Now</button>
-                            </div>
-                            <div class="anime-card fade-in p-3">
-                                <img loading="lazy" src="photos/demonslayer.png" alt="Demon Slayer">
-                                <h5 class="mt-3">Demon Slayer</h5>
-                                <p class="card-desc">Sword fights, grief, and family devotion collide in a richly styled supernatural journey.</p>
-                                <button class="btn-pink mt-auto">Watch Now</button>
-                            </div>
+        <!-- Horizontal Carousel for Featured Anime -->
+        <div id="animeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="anime-card fade-in p-3">
+                            <img loading="lazy" src="photos/attackontitan.png" alt="Attack on Titan">
+                            <h5 class="mt-3">Attack on Titan</h5>
+                            <p class="card-desc">Humanity's struggle for survival against the titans. An epic
+                                action-packed anime!</p>
+                            <button class="btn-pink">Watch Now</button>
                         </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="featured-carousel-track">
-                            <div class="anime-card fade-in p-3">
-                                <img loading="lazy" src="photos/onepiece.png" alt="One Piece">
-                                <h5 class="mt-3">One Piece</h5>
-                                <p class="card-desc">Join Luffy's chaotic crew on a globe-spanning search for the ultimate treasure.</p>
-                                <button class="btn-pink mt-auto">Watch Now</button>
-                            </div>
-                            <div class="anime-card fade-in p-3">
-                                <img loading="lazy" src="photos/academia.png" alt="My Hero Academia">
-                                <h5 class="mt-3">My Hero Academia</h5>
-                                <p class="card-desc">Superpowered teens train to become heroes in a world where pressure never really fades.</p>
-                                <button class="btn-pink mt-auto">Watch Now</button>
-                            </div>
-                            <div class="anime-card fade-in p-3">
-                                <img loading="lazy" src="photos/dragonBallZ.png" alt="Dragon Ball Z">
-                                <h5 class="mt-3">Dragon Ball Z</h5>
-                                <p class="card-desc">One of anime's most iconic battle sagas, packed with legendary transformations and scale.</p>
-                                <button class="btn-pink mt-auto">Watch Now</button>
-                            </div>
+                        <div class="anime-card fade-in p-3">
+                            <img loading="lazy" src="photos/naruto.png" alt="Naruto">
+                            <h5 class="mt-3">Naruto</h5>
+                            <p class="card-desc">Follow the journey of Naruto Uzumaki as he strives to become the
+                                Hokage.</p>
+                            <button class="btn-pink">Watch Now</button>
+                        </div>
+                        <div class="anime-card fade-in p-3">
+                            <img loading="lazy" src="photos/demonslayer.png" alt="Demon Slayer">
+                            <h5 class="mt-3">Demon Slayer</h5>
+                            <p class="card-desc">Tanjiro's journey to fight demons after his family is slaughtered by
+                                them.</p>
+                            <button class="btn-pink">Watch Now</button>
                         </div>
                     </div>
                 </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
-
-        <section class="content-panel">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">Choose a Lane</span>
-                    <h2 class="section-title">Browse Anime by Genre</h2>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="anime-card fade-in p-3">
+                            <img loading="lazy" src="photos/onepiece.png" alt="One Piece">
+                            <h5 class="mt-3">One Piece</h5>
+                            <p class="card-desc">Join Luffy on his journey to find the legendary treasure, the One
+                                Piece!</p>
+                            <button class="btn-pink">Watch Now</button>
+                        </div>
+                        <div class="anime-card fade-in p-3">
+                            <img loading="lazy" src="photos/academia.png" alt="My Hero Academia">
+                            <h5 class="mt-3">My Hero Academia</h5>
+                            <p class="card-desc">Follow the story of Izuku Midoriya in a world where most people have
+                                superpowers.</p>
+                            <button class="btn-pink">Watch Now</button>
+                        </div>
+                        <div class="anime-card fade-in p-3">
+                            <img loading="lazy" src="photos/dragonBallZ.png" alt="Dragon Ball Z">
+                            <h5 class="mt-3">Dragon Ball Z</h5>
+                            <p class="card-desc">The legendary saga of Goku and his friends fighting against powerful
+                                foes.</p>
+                            <button class="btn-pink">Watch Now</button>
+                        </div>
+                    </div>
                 </div>
-                <p class="section-copy">Pick a mood and fetch a fresh batch from the API without leaving the page.</p>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-            <div class="genre-browser-grid">
-                <div class="genre-list">
-                    <div class="category-card genre-card p-3">
+        <!-- Browse Anime Categories -->
+        <div class="mt-5">
+            <h3 class="text-white">Browse Anime by Category</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="category-card p-3">
                         <a href="#" class="genre-link" data-genre-id="1">
                             <h5>Action</h5>
-                            <p>Explosive fights, huge momentum, and stakes that never stay small for long.</p>
+                            <p class="text-white">Explore the action-packed anime filled with intense battles and
+                                adventures!</p>
                         </a>
                     </div>
-                    <div class="category-card genre-card p-3">
+                </div>
+                <div class="col-md-3">
+                    <div class="category-card p-3">
                         <a href="#" class="genre-link" data-genre-id="22">
                             <h5>Romance</h5>
-                            <p>Heartfelt chemistry, emotional tension, and stories that linger after the credits.</p>
+                            <p class="text-white">Fall in love with these heartwarming anime stories.</p>
                         </a>
                     </div>
-                    <div class="category-card genre-card p-3">
+                </div>
+                <div class="col-md-3">
+                    <div class="category-card p-3">
                         <a href="#" class="genre-link" data-genre-id="2">
                             <h5>Adventure</h5>
-                            <p>Big maps, bold crews, and the kind of quests that keep expanding the world.</p>
+                            <p class="text-white">Set off on grand adventures with these exciting anime!</p>
                         </a>
                     </div>
-                    <div class="category-card genre-card p-3">
+                </div>
+                <div class="col-md-3">
+                    <div class="category-card p-3">
                         <a href="#" class="genre-link" data-genre-id="10">
                             <h5>Fantasy</h5>
-                            <p>Magic systems, mythical lands, and dreamlike worlds with unforgettable atmosphere.</p>
+                            <p class="text-white">Get lost in magical worlds with our fantasy anime selection.</p>
                         </a>
                     </div>
                 </div>
-
-                <div class="showcase-card">
-                    <div class="showcase-card__label">Discovery Tip</div>
-                    <h3>Use genres like scene-setting.</h3>
-                    <p class="card-desc">Treat each genre as a different visual mood. Action for adrenaline, romance for softness, fantasy for atmosphere, adventure for momentum.</p>
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="genre-results" class="content-panel results-panel">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">Live Results</span>
-                    <h2 class="section-title">Genre Matches</h2>
-                </div>
-                <p class="section-copy">Your selected genre will load here with paging controls.</p>
+    <!-- Genre Results -->
+    <section id="genre-results" class="container mt-5">
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="text-center my-4 d-none">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
+        </div>
+        <div class="row" id="results-grid"></div>
 
-            <div id="loading-spinner" class="text-center my-4 d-none">
-                <div class="spinner-border text-light" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
+        <!-- Pagination (Initially Hidden) -->
+        <div id="pagination-controls" class="text-center my-4 d-none">
+            <button id="prevPage" class="btn btn-outline-light mx-2" disabled>Previous</button>
+            <span id="currentPage" class="text-white">Page 1</span>
+            <button id="nextPage" class="btn btn-outline-light mx-2">Next</button>
+        </div>
+    </section>
 
-            <div class="row" id="results-grid"></div>
-
-            <div id="pagination-controls" class="text-center my-4 d-none">
-                <button id="prevPage" class="btn btn-outline-light mx-2" disabled>Previous</button>
-                <span id="currentPage" class="text-white">Page 1</span>
-                <button id="nextPage" class="btn btn-outline-light mx-2">Next</button>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer id="footer"></footer>
 
-    <script src="auth.js"></script>
-    <script src="site-shell.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("navbar.php");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </body>
 
 </html>
